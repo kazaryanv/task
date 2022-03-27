@@ -1,8 +1,10 @@
 <?php
 
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\StoryController;
 use Illuminate\Support\Facades\Route;
-
+require ("auth.php");
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,13 +19,6 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get('/history',[\App\Http\Controllers\StoryController::class,'index'])->name('page2');
-Route::get('/' , [\App\Http\Controllers\StoryController::class,'home_view'])->name('home');
-Route::get('/admin' , [\App\Http\Controllers\LoginController::class,'dashboard'])->name('dashboard');
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///
-///
-///
-///
-Route::get("/login", [\App\Http\Controllers\LoginController::class, 'index'])->name("login-view");
-Route::post("/login/store", [\App\Http\Controllers\LoginController::class, 'login'])->name("login");
+Route::get('/history',[StoryController::class,'index'])->name('page2');
+Route::get('/' , [StoryController::class,'home_view'])->name('home');
+//Route::get('/admin' , [LoginController::class,'dashboard'])->name('dashboard');
