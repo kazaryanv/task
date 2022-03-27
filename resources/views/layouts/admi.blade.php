@@ -189,7 +189,6 @@
         </div>
     </div>
 </div>
-
 <!-- Bootstrap core JavaScript-->
 <script src="{{asset('admin-panel/vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('admin-panel/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
