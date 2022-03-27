@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 //});
 Route::get('/history',[\App\Http\Controllers\StoryController::class,'index'])->name('page2');
 Route::get('/' , [\App\Http\Controllers\StoryController::class,'home_view'])->name('home');
+Route::get('/admin' , [\App\Http\Controllers\AdminController::class,'dashboard'])->name('dashboard');
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///
 ///

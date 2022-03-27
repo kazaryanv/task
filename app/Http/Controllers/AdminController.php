@@ -27,7 +27,7 @@ class AdminController extends Controller
     }
 
     public function dashboard() {
-        return redirect()->route('dashboard');
+        return view('admin.dashboard');
     }
 
     public function  logout() {
