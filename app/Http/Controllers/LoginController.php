@@ -17,18 +17,18 @@ class LoginController extends Controller
     public function login(Request $request) {
         $user_data = $request->only(['email', 'password']);
         if(Auth::attempt($user_data)) {
-            return redirect()->route('admin.dashboard');
+            return redirect()->route('dashboard');
         } else {
             return back();
         }
     }
-//    public function create_user(array $data) {
-//        return User::create([
-//            'name' => $data['name'],
-//            'email' => $data['email'],
-//            'password' => Hash::make($data['password'])
-//        ]);
-//    }
+    public function create_user(array $data) {
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password'])
+        ]);
+    }
 
     public function dashboard() {
         return view('admin.dashboard');
