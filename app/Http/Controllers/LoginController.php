@@ -2,18 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
-class AdminController extends Controller
+class LoginController extends Controller
 {
     public function index() {
-        return view("Auth.admin");
+        return view("Auth.login");
     }
 
     public function login(Request $request) {
         $user_data = $request->only(['email', 'password']);
         if(Auth::attempt($user_data)) {
-            return redirect()->route('dashboard');
+            return redirect()->route('admin.dashboard');
         } else {
             return back();
         }
