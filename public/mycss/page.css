@@ -1,0 +1,435 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body a{
+    color: #39403e;
+    text-decoration: none;
+}
+.container1{
+    max-width: 1100px;
+    min-width: 325px;
+    width: 100%;
+    height: auto;
+    margin: 0px 160px;
+}
+header{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    background: #DEEBE8;
+}
+.header{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header2{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.header3{
+    width: 550px;
+    height: 30px;
+}
+.header3>ul{
+    width: 550px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+.header3>ul>li{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #39403ec4;
+    cursor: pointer;
+}
+.logotip{
+    width: 400px;
+    height: 30px;
+    display: flex;
+}
+.logo{
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    display: flex;
+    align-items: flex-end;
+    text-transform: uppercase;
+    color: #3A685B;
+}
+.section01{
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/sumatran-tiger.png);
+    background-size: cover;
+}
+.contest{
+    height: 2390px;
+    margin-top: -150px;
+    margin-left: 100px;
+    margin-bottom: 150px;
+}
+.glavnaya{
+    width: 474px;
+    height: 50px;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 50px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.contest2{
+    width: 100%;
+    height: auto;
+    background: #34574D;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contest2>p{
+    width: 75%;
+    height: auto;
+    text-align: justify;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 40px;
+}
+.kosti{
+    width: 520px;
+    height: 300px;
+    background-image: url(../images/TigerSkelLyd.png);
+    margin-top: 13px;
+}
+.vid{
+    width: 240px;
+    height: 40px;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.mini{
+    width: 360px;
+    height: auto;
+    text-align: justify;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    /*margin-top: ;*/
+}
+.twocon{
+    width: 750px;
+    height: auto;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.tayger{
+    width: 372px;
+    height: 349px;
+    background-image: url(../images/tiger-looking.png);
+    margin-left: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: right;
+}
+.logo1{
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    display: flex;
+    align-items: flex-end;
+    text-transform: uppercase;
+    color: #3A685B;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+.logotip1{
+    height: 30px;
+    display: flex;
+}
+.icon01{
+    width: 40px;
+    height: 40px;
+}
+.icon1{
+    width: 40px;
+    height: 40px;
+}
+.margin{
+    margin-right: 40px;
+}
+.icon2{
+    width: 40px;
+    height: 40px;
+}
+.icon3{
+    width: 40px;
+    height: 40px;
+}
+.icons {
+    display: flex;
+}
+.futer{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#contacts{
+    background-color: #DEEBE8;
+}
+/*******************************/
+.box{
+    width: 50px;
+    height: 50px;
+    background: #34574D;
+    border-radius: 100%;
+}
+
+.iconu {
+    width: 55px;
+    display: flex;
+    height: 49px;
+    align-items: center;
+    justify-content: center;
+}
+.iconf{
+    width: 49px;
+    display: flex;
+    height: 49px;
+    align-items: center;
+    justify-content: center;
+}
+/*******************************************************/
+.containerse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+    font-family:'Helvetica Neue', sans-serif;
+}
+.maniue{
+    width: 270px;
+    height: auto;
+}
+.maniue a {
+    font-size: 35px;
+    color: #3A685B;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.popover {
+    display: none;
+}
+
+.popover:target {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popover .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 0;
+    height: 0;
+    color: #fff;
+    background: linear-gradient(283.61deg, #2B3D38 3.27%, #3A685B 99.25%);
+    -webkit-animation: 1s grow ease forwards;
+    animation: 1s grow ease forwards;
+    text-align: center;
+    box-shadow: 0px 6px 8px rgba(19, 19, 19, .7);
+}
+
+.nav_list  {
+    list-style-type: none;
+}
+
+.nav_list a {
+    text-decoration: none;
+    font-size: 50px;
+    color: #fff;
+}
+
+.nav_list_item {
+    height: 100%;
+    overflow: hidden;
+}
+
+.nav_list li {
+    padding: 15px 0;
+    text-transform: uppercase;
+    transform: translateY(200px);
+    opacity: 0;
+    -webkit-animation: 2s slideUp ease forwards .5s;
+    animation: 2s slideUp ease forwards .5s;
+    position: relative;
+}
+
+.nav_list li::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0px;
+    left: 0;
+    bottom: 10px;
+    transition: all .5s ease;
+}
+
+.nav_list li:hover:before {
+    width: 100%;
+}
+
+.popover p {
+    padding: 50px;
+    opacity: 0;
+    -webkit-animation: 1s fadeIn ease forwards 1s;
+    animation: 1s fadeIn ease forwards 1s;
+}
+
+.popover .close::after {
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: #B55038;
+    color: #fff;
+    content: "×";
+    cursor: pointer;
+    opacity: 0;
+    -webkit-animation: 1s fadeIn ease forwards .1s;
+    animation: 1s fadeIn ease forwards .1s;
+}
+.popover .close1::after {
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 2000px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: transparent;
+    content: "×";
+    cursor: pointer;
+    opacity: 0;
+    -webkit-animation: 1s fadeIn ease forwards .1s;
+    animation: 1s fadeIn ease forwards .1s;
+}
+.facebook{
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 15.1px;
+}
+.soc{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+@-webkit-keyframes grow {
+    100% {
+        height: 90%;
+        width: 90%;
+    }
+}
+@keyframes grow {
+    100% {
+        height: 90%;
+        width: 90%;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slideUp {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
