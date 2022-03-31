@@ -19,6 +19,8 @@ require ("auth.php");
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+Route::get('/home-pages',[StoryController::class,'home_admin'])->name('home-admin');
+Route::get('/about',[StoryController::class,'about'])->name('about');
 Route::get('/history',[StoryController::class,'index'])->name('page2');
 Route::get('/' , [StoryController::class,'home_view'])->name('home');
 //Route::get('/admin' , [LoginController::class,'dashboard'])->name('dashboard');
