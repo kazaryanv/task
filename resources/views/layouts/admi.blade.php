@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="description" content="main-page">
+    <meta name="keywords" content="main">
 
     <title>SB Admin 2 - Blank</title>
 
@@ -201,4 +203,3 @@
 
 </body>
 </html>
-

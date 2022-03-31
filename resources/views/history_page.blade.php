@@ -80,32 +80,29 @@
                         <a class="margin" href="#">
                             <div class="box">
                                 <div class="iconu">
-                                    <object type="image/svg+xml" data="../../images/user.svg" style="width: 30px; height: 30px" id="svg">
-                                    </object>
+                                    <img  src="../../images/user.svg" style="width: 30px; height: 30px" >
                                 </div>
                             </div>
                         </a>
                         <a class="margin" href="#">
                             <div class="box">
                                 <div class="iconf">
-                                    <object type="image/svg+xml" data="../../images/facebook.svg" style="width: 50px; height: 40px" id="svg1">
-                                    </object>
+                                    <img  src="../../images/facebook.svg" style="width: 50px; height: 40px" >
+
                                 </div>
                             </div>
                         </a>
                         <a class="margin" href="#">
                             <div class="box">
                                 <div class="iconf">
-                                    <object type="image/svg+xml" data="../../images/instagram.svg" style="width: 40px; height: 30px" id="svg2">
-                                    </object>
+                                    <img  src="../../images/instagram.svg" style="width: 40px; height: 30px" >
                                 </div>
                             </div>
                         </a>
                         <a class="margin" href="#">
                             <div class="box">
                                 <div class="iconf">
-                                    <object type="image/svg+xml" data="../../images/viber.svg" style="width: 40px; height: 35px" id="svg3">
-                                    </object>
+                                    <img src="../../images/viber.svg" style="width: 40px; height: 35px">
                                 </div>
                             </div>
                         </a>

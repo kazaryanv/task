@@ -28,6 +28,12 @@
                                                    name="email"
                                                    id="exampleInputEmail" aria-describedby="emailHelp"
                                                    placeholder="Enter Email Address...">
+                                            @error('email')
+                                            <div class="text text-danger d-flex align-items-center justify-content-center">{{ $message }}</div>
+                                            @enderror
+                                            @error('password')
+                                            <div class="text text-danger d-flex align-items-center justify-content-center">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"

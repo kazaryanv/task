@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use function Psr\Log\error;
 
 class LoginController extends Controller
 {
@@ -14,7 +15,7 @@ class LoginController extends Controller
         return view("Auth.login");
     }
 
-    public function login(Request $request) {
+    public function login(AuthRequest $request) {
         $user_data = $request->only(['email', 'password']);
         if(Auth::attempt($user_data)) {
             return redirect()->route('dashboard');
