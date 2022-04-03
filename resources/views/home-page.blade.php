@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.admi')
 @section('title')
     Home
 @endsection
