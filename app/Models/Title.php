@@ -12,6 +12,8 @@ class Title extends Model
         'slug',
         'title',
         'description',
+        'created_at',
+        'updated_at',
 
     ];
 }
