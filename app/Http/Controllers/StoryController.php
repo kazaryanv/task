@@ -12,26 +12,26 @@ class StoryController extends Controller
         $title = new Title();
         return view('history_page', ['data' => $title->get()]);
     }
-    public function about(){
-        return view('about');
-    }
     public function home_view(){
         $title = new Title();
         return view('hystory', ['data' => $title->get()]);
     }
 
+
+
+
+    public function about(){
+        return view('about');
+    }
     public function indexed(){
         $title = new Title();
         return view('home-page',['date' => $title->get()]);
     }
-
-
-    public function edit($title)
+    public function edit($id)
     {
         $titles = new Title();
-        return view('home-page', ['title' => $titles -> find($title)]);
+        return view('home-page', ['title' => $titles -> find($id)]);
     }
-
     public function update(Request $request, $id)
     {
         $titles = new Title();

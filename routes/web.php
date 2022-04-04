@@ -27,8 +27,7 @@ Route::get('/' , [StoryController::class,'home_view'])->name('home');
 
 
 
-Route::get('/about',[StoryController::class,'about'])->name('about');
+Route::get('admin/about',[StoryController::class,'about'])->name('about');
 Route::get('admin/home-page', [StoryController::class, 'indexed'])->name('home-admin');
-
-
-Route::resource("/admin", DescriptionController::class);
+Route::get('admin/about/edit/{id}', [StoryController::class, 'edit'])->name('edit-title');
+Route::post('admin/home-page/edit/store', [StoryController::class, 'update'])->name('update');
