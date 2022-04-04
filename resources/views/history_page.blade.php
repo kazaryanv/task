@@ -1,6 +1,10 @@
 @extends('layouts.default')
 @section('title')
-    page2
+    @if($data)
+        @foreach($data as $row)
+            {{$row -> title}}
+        @endforeach
+    @endif
 @endsection
 @section('content')
     <header>

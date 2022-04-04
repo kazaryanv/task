@@ -1,6 +1,10 @@
 @extends('layouts.default')
 @section('title')
-    Home
+    @if($data)
+        @foreach($data as $row)
+            {{$row -> description}}
+        @endforeach
+    @endif
 @endsection
 @section('content')
     <header>

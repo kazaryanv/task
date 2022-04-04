@@ -16,7 +16,15 @@ class TitleSeeder extends Seeder
     public function run()
     {
         DB::table("titles")->insert([
-            'slug' => "home-page",
+            'slug' => 'home',
+            'title' => 'informacia dlya chaynikov',
+            'description' => 'uznavayte bolshe',
+            'created_at' => NOW(),
+            'updated_at' => NOW()
+        ]);
+
+        DB::table("titles")->insert([
+            'slug' => 'about',
             'title' => 'informacia dlya chaynikov',
             'description' => 'uznavayte bolshe',
             'created_at' => NOW(),

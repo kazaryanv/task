@@ -9,7 +9,7 @@
     <meta name="description" content="main-page">
     <meta name="keywords" content="main">
 
-    <title>SB Admin 2 - Blank</title>
+    <title>@yield('title')</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('admin-panel/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -61,7 +61,7 @@
                  data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Login Screens:</h6>
-                    <a class="collapse-item" href="{{route('home-admin')}}">home page</a>
+                    <a class="collapse-item" href="{{ route('home-admin') }}">home page</a>
                     <a class="collapse-item" href="{{route('about')}}">about</a>
                     <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
                     <div class="collapse-divider"></div>

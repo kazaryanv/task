@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('titles', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('slug');
+            $table->string('slug')->unique();
             $table->string('title');
             $table->string('description');
             $table->timestamps();
