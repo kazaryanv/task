@@ -2,7 +2,7 @@
 @section('title')
     @if($data)
         @foreach($data as $row)
-            {{$row -> description}}
+            {{$row -> title}}
         @endforeach
     @endif
 @endsection
