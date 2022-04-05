@@ -14,8 +14,7 @@ class DescriptionController extends Controller
      */
     public function index()
     {
-        $title = new Title();
-        return view('home-page', ['data' => $title->get()]);
+        return view("home-page", ['data' => Title::get()]);
     }
 
     /**
@@ -25,7 +24,7 @@ class DescriptionController extends Controller
      */
     public function create()
     {
-        //
+       //
     }
 
     /**
@@ -36,7 +35,7 @@ class DescriptionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+     //
     }
 
     /**
@@ -45,10 +44,9 @@ class DescriptionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Title $title)
     {
-        $title = new Title();
-        return view('', ['titles' => $title -> find($id)]);
+        return view('home-page', ['data' => $title]);
     }
 
     /**
@@ -57,10 +55,9 @@ class DescriptionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Title $title)
     {
-        $title = new Title();
-        return view('home-page', ['title' => $title -> find($id)]);
+        return view('about', ['title' => $title]);
     }
 
     /**
@@ -70,19 +67,13 @@ class DescriptionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Title $title)
     {
-        $titles = new Title();
-        $updated_title = $titles->find($request->id);
-        $updating = $updated_title->update([
-            'title' => $request->title,
-            'description' => $request->description,
-            'updated_at' => NOW()
-        ]);
-        if($updating) {
-            return redirect('home-page');
+        $update = $title->update($request->all());
+        if($update) {
+            return redirect()->route('edit', $title)->with('success', 'Title successfully created!');
         } else {
-            return 'Update fail!';
+            return back()->with('fail', 'Fail!');
         }
     }
 

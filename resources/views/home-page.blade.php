@@ -4,17 +4,21 @@
 @endsection
 @section('content')
     <div class="container">
-        <form action="" method="post">
-            @csrf
-            <div class="mb-3">
-                <label for="title" class="form-label">title</label>
-                <input value="title" type="text" name="title" class="form-control" id="title" placeholder="title">
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
             </div>
-            <div class="mb-3">
-                <label for="description" class="form-label">description</label>
-                <input  value="description" type="text" name="description" class="form-control" id="description" placeholder="description">
-            </div>
-            <button class="btn btn-primary">Update</button>
-        </form>
+        @endif
+        @if(isset($data))
+            @foreach($data as $row)
+                <div>
+                    <h2>{{ $row -> title }}</h2>
+                    <form class="d-inline" action="{{ route('update.edit', $data) }}" method="get">
+                        @csrf
+                        <button class="btn btn-success">Edit</button>
+                    </form>
+                </div>
+            @endforeach
+        @endif
     </div>
 @endsection
