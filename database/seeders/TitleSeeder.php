@@ -17,8 +17,8 @@ class TitleSeeder extends Seeder
     {
 
             DB::table("titles")->insert([
-                'slug' => 'about',
-                'title' => 'informacia dlya chaynikov',
+                'slug' => 'home',
+                'title' => 'glavnaya stranica',
                 'description' => 'uznavayte bolshe',
                 'created_at' => NOW(),
                 'updated_at' => NOW()

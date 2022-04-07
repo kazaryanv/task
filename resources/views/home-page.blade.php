@@ -3,20 +3,19 @@
     Home
 @endsection
 @section('content')
-    @if(isset($data))
-        @foreach($data as $row)
-            <div class="container">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="{{route('update.index')}}">Back</a>
-                        <h2>{{ $row -> title }}</h2>
-                        <form class="d-inline" action="{{ route('update.edit', $data) }}" method="get">
-                            @csrf
-                            <button class="btn btn-success">Edit</button>
-                        </form>
-                    </div>
+    <div class="container">
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <a href="{{route('title')}}">Back</a>
+                    <h2>Slug`{{$title->slug}}</h2>
+                    <p>Title`{{ $title -> title }}</p>
+                    <p>Description`{{ $title -> description }}</p>
+                    <button class="btn btn-primary">
+                        <a style="color:white; text-decoration: none" href="{{ route('edit-title', $title->id) }}">Edit</a>
+                    </button>
                 </div>
             </div>
-        @endforeach
-    @endif
+        </div>
+    <div>
 @endsection

@@ -14,7 +14,7 @@ class DescriptionController extends Controller
      */
     public function index()
     {
-        return view("home-page", ['data' => Title::get()]);
+        return view("update", ['data' => Title::get()]);
     }
 
     /**
@@ -24,7 +24,7 @@ class DescriptionController extends Controller
      */
     public function create()
     {
-       //
+        return view("about");
     }
 
     /**
@@ -35,13 +35,24 @@ class DescriptionController extends Controller
      */
     public function store(Request $request)
     {
-     //
+        $store = Title::create([
+            'slug' => $request->slug,
+            'title' => $request->title,
+            'description' => $request->description,
+            'created_at' => NOW(),
+            'updated_at' => NOW()
+        ]);
+        if($store) {
+            return redirect()->route('title.index')->with('success', 'Title successfully created!');
+        } else {
+            return back()->with('fail', 'Fail!');
+        }
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param \App\Models\Title $title
      * @return \Illuminate\Http\Response
      */
     public function show(Title $title)
@@ -52,22 +63,22 @@ class DescriptionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Title  $title
      * @return \Illuminate\Http\Response
      */
     public function edit(Title $title)
     {
-        return view('about', ['title' => $title]);
+        return view('about', ['titles' => $title]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Title $title
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Title $title)
+    public function update(Request $request, Title  $title)
     {
         $update = $title->update($request->all());
         if($update) {
@@ -80,11 +91,16 @@ class DescriptionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Title $title
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Title $title)
     {
-        //
+        $delete = $title->delete();
+        if($delete) {
+            return redirect()->route('title.index')->with('success', 'Title successfully deleted!');
+        } else {
+            return back()->with('fail', 'Fail!');
+        }
     }
 }
