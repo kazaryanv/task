@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\DescriptionController;
+
 use App\Http\Controllers\StoryController;
 use App\Http\Controllers\TitleController;
 use Illuminate\Support\Facades\Route;
@@ -28,8 +28,3 @@ Route::get('/admin/title', [TitleController::class, 'index'])->name('title');
 Route::get('/admin/title/{id}', [TitleController::class, 'show'])->name('one-title');
 Route::get('admin/title/edit/{id}', [TitleController::class, 'edit'])->name('edit-title');
 Route::post('admin/title/edit/store', [TitleController::class, 'update'])->name('update-title');
-
-//Route::resource("/admin/title", DescriptionController::class);
-////
-//Route::get('admin/about',[StoryController::class,'about'])->name('about');
-//Route::get('admin/home-page', [StoryController::class, 'indexed'])->name('home-admin');

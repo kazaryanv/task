@@ -24,5 +24,14 @@ class TitleSeeder extends Seeder
                 'updated_at' => NOW()
             ]);
 
+        DB::table("titles")->insert([
+            'slug' => 'about',
+            'title' => 'glavnaya stranica',
+            'description' => 'uznavayte bolshe',
+            'created_at' => NOW(),
+            'updated_at' => NOW()
+        ]);
+
+
     }
 }

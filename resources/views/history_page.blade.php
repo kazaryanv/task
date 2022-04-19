@@ -1,4 +1,11 @@
 @extends('layouts.default')
+@section('description')
+    @if($data)
+        @foreach($data as $row)
+            {{$row -> description}}
+        @endforeach
+    @endif
+@endsection
 @section('title')
     @if($data)
         @foreach($data as $row)

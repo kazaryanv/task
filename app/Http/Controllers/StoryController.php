@@ -11,14 +11,15 @@ use function Symfony\Component\String\Slugger\slug;
 class StoryController extends Controller
 {
     public function index() {
-//        $title = new Title();
-        $title = DB::table('titles')->where('slug', '=','home');
-        return view('history_page', ['data' => $title->get()]);
+        $title = new Title();
+//        $title = DB::table('titles')->where('slug', '=','about');
+//        return view('history_page', ['data' => $title->get()]);
     }
     public function home_view(){
-//        $description = new Title();
-        $description = DB::table('titles')->where('slug','=','about');
-        return view('hystory', ['data' => $description->get()]);
+        $description = new Title();
+        return view('hystory', ['data' => $description->where('slug' , '=' , 'home')]);
+//        $description = DB::table('titles')->where('slug','=','home');
+//        return view('hystory', ['data' => $description->get()]);
     }
 
 
