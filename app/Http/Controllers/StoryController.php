@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Image;
 use App\Models\Title;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -21,4 +22,8 @@ class StoryController extends Controller
         return view('hystory', ['data' => $description->get()]);
     }
 
+    public function all_Tiger(){
+        $tigers = new Image();
+        return  view('all-tiger', ['data' => $tigers->get()]);
+    }
 }

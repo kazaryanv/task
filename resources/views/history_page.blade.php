@@ -51,7 +51,7 @@
                             </div>
                             <li><a class="links" href="{{route('home')}}">Главная</a></li>
                             <li><a class="links" href="{{route('page2')}}">О тиграх</a></li>
-                            <li><a class="links" href="#photo">Фотогалерея</a></li>
+                            <li><a class="links" href="{{route('all')}}">Фотогалерея</a></li>
                             <li><a class="links" href="#contacts">Контакты</a></li>
                         </ul>
                     </div>
