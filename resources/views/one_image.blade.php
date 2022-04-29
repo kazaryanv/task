@@ -15,7 +15,7 @@
                         <a style="color:white; text-decoration: none" href="{{ route('edit-title', $image->id) }}">Edit</a>
                     </button>
                     <button class="btn btn-danger">
-                        <a style="color:white; text-decoration: none" href="{{route('image', $image->id)}}">Delete</a>
+                        <a style="color:white; text-decoration: none" href="{{route('delete-img', $image->id)}}">Delete</a>
                     </button>
                 </div>
             </div>

@@ -1,4 +1,7 @@
 @extends('layouts.default')
+@section('link')
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+@endsection
 @section('title')
 all-tiger
 @endsection
@@ -48,20 +51,30 @@ all-tiger
             </div>
         </div>
     </header>
-    <section class="section2">
+    <section class="section-alltigers">
         <div class="container">
-            <div id="type" class="hystoryauto">
-                <div class="istoriya">
+            <div id="glavnaya" class="tiger">
+                <div class="contents"  style="justify-content: flex-end;">
+                    <h1 class="glavnaya" style="margin-bottom: 200px;margin-right: 150px; justify-content: center">Виды тигров</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="contents" >
+                <div style="width: 100%;display: flex;flex-wrap: wrap;align-items: center;justify-content: center;">
                     @if(isset($data))
                         @foreach($data as $row)
-                            <div>
-                                <div style="width: 15%;height: 70px;display: flex;align-items: center;justify-content: center;">
-                                    <img style="width: 50px;height: 50px;" src="{{asset('storage/' . $row -> image)}}">
-                                </div>
-                                <div>
-                                    <h2>{{ $row -> name }}</h2>
-                                    <p>{{ $row -> content}}</p>
-                                </div>
+                            <div style="margin-top: -230px;margin-left: 125px">
+                                <a style="cursor: default" href="#">
+                                    <div style="margin-bottom: 330px">
+                                        <img style="width: 440px;height: 250px;" src="{{asset('storage/' . $row -> image)}}">
+                                        <div>
+                                            <h2 class="viditigrov">{{ $row -> name }}</h2>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         @endforeach
                     @endif

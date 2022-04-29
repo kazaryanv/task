@@ -18,6 +18,7 @@
     <link href="{{asset('mycss/page.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('mycss/job.css')}}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{{asset('mycss/media.css')}}" type="text/css">
+    @yield('link')
 </head>
 <body>
 @yield('content')

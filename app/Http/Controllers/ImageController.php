@@ -42,9 +42,9 @@ class ImageController extends Controller
         $delete_image = $image->find($id);
         $deleting = $delete_image->delete();
         if($deleting) {
-            return redirect('image');
+            return redirect()->route('image')->with('success','Deleted successfully');
         } else {
-            return 'Update fail!';
+            return redirect()->route(404);
         }
     }
 
