@@ -12,7 +12,7 @@
                     <p>Title`{{ $image -> name }}</p>
                     <p>Description`{{ $image -> content }}</p>
                     <button class="btn btn-primary">
-                        <a style="color:white; text-decoration: none" href="{{ route('edit-title', $image->id) }}">Edit</a>
+                        <a style="color:white; text-decoration: none" href="{{ route('edit-img', $image->id) }}">Edit</a>
                     </button>
                     <button class="btn btn-danger">
                         <a style="color:white; text-decoration: none" href="{{route('delete-img', $image->id)}}">Delete</a>

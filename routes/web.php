@@ -37,4 +37,6 @@ Route::get('/admin/Image', [ImageController::class, 'index'])->name('image');
 Route::get('/admin/image/new', [ImageController::class, 'create'])->name('new-image');
 Route::post('/admin/image/new/send', [ImageController::class, 'upload'])->name('store-image');
 Route::get('/admin/image/{id}', [ImageController::class, 'show'])->name('one-image');
+Route::get('admin/edit/{id}', [ImageController::class, 'edit'])->name('edit-img');
+Route::post('admin/edit/store/{id}', [ImageController::class, 'update'])->name('update-img');
 Route::get('/admin/delete/{id}',[ImageController::class,'delete'])->name('delete-img');
