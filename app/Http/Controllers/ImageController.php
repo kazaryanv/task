@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Image;
+use Faker\Core\File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use function Psy\debug;
+use function Symfony\Component\Finder\name;
 
 class ImageController extends Controller
 {
@@ -44,41 +48,39 @@ class ImageController extends Controller
     }
 
 
-    public function update(Request $request, $id) {
-        $file =Image::find($id);
-        $file_name = $file->image;
-        $file_path = public_path('uploads/' . $file_name);
-        if ($request->hasFile('image')){
-            unlink($file_path);
-            $f = $request->file('image');
-            $file_ext = $f->getClientOriginalExtension();
-            $file_name = rand(123456,9999999).'.'. $file_ext;
-            $file_path = public_path('uploads/');
-            $f->move($file_path,$file_name);
-            $file->image = $file_name;
-        }else{
-            $file->image = $request->old_image;
+    public function update(Request $request,$id) {
+            $users  = Image::find($id);
+            $users->name                 = $request->input('name');
+            $users->content              = $request->input('content');
+            $users->image                = $request->input('image');
+
+            if($request->hasfile('image'))
+            {
+                $file = $request->file('image');
+                $extension = $request->image->getClientOriginalExtension();
+                $fileName = uniqid().'.'.$extension;
+                $file->move(public_path().'/storage/',$fileName);
+                $data = $fileName;
+                $users->image = $data;
+                dd($fileName);
+            }
+              $users->save();
+              if($users) {
+                 return redirect()->route('image')->with('success', 'Row successfully created');
+              } else {
+                 return redirect()->route('new-image')->with('fail', 'Fail!');
+              }
         }
-
-        $file->name = $request->name;
-        $file->content = $request['content'];
-        $file->save();
-
-        if ($file){
-            return redirect()->route('image')->with('success','Row Updating created');
-        }else{
-            return redirect()->route('image')->with('fail', 'Fail!');
-        }
-
-    }
     public function delete($id) {
-        $image = new Image();
-        $delete_image = $image->find($id);
-        $deleting = $delete_image->delete();
-        if($deleting) {
+        $delete =  Image::find($id);
+        $file_name = $delete->image;
+        $file_path = public_path('storage/'.$file_name);
+        unlink($file_path);
+        $delete->delete();
+        if($file_path) {
             return redirect()->route('image')->with('success','Deleted successfully');
         } else {
-            return redirect()->route(404);
+            return redirect()->back()->with('success','Deleted file');
         }
     }
 
