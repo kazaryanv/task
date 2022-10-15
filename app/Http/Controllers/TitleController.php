@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TitleRequest;
 use App\Models\Title;
 use Illuminate\Http\Request;
 
@@ -23,7 +24,7 @@ class TitleController extends Controller
         return view('about', ['title' => $title -> find($id)]);
     }
 
-    public function update(Request $request) {
+    public function update(TitleRequest $request) {
         $title = new Title();
         $updated_post = $title->find($request->id);
         $updating = $updated_post->update([

@@ -31,8 +31,8 @@ class AuthRequest extends FormRequest
     public function messages()
     {
         return [
-            'email.required' => 'email ili porol ne korekten',
-            'password.required' => 'email ili porol ne korekten'
+            'email.required' => 'We need to know your email address and password!',
+            'password.required' => 'We need to know your email address and password!'
         ];
     }
 }

@@ -3,6 +3,15 @@
     update
 @endsection
 @section('content')
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <div class="container">
         <h2>{{$title->slug}}</h2>
         <form action="{{ route("update-title") }}" method="post">
@@ -20,7 +29,7 @@
             <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
                 update
             </button>
-
+            <a href="{{route('title')}}">Back</a>
             <!-- Modal -->
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">

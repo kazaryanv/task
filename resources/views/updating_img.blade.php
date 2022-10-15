@@ -3,6 +3,15 @@
     update
 @endsection
 @section('content')
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <div class="container">
         <form action="{{route('update-img' ,$image -> id)}}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
@@ -22,6 +31,7 @@
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                 update
             </button>
+            <a href="{{ route('one-image', $image->id) }}">Back</a>
 
             <!-- Modal -->
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

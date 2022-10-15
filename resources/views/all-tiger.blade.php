@@ -10,7 +10,7 @@ all-tiger
         <div class="container1" style="margin: 0px 70px; max-width: 1200px">
             <div class="header">
                 <div class="header2">
-                    <div class="logotip"><div style="display: flex;cursor: pointer"><a style="color: transparent;display: flex;" class="links" href="{{route('home')}}"><h1 class="logo">Tiger<h2 class="logo" style="color: #B55038;">2022</h2></h1></a></div></div>
+                    <div class="logotip"><div style="cursor: pointer"><a style="color: transparent;display: flex;" class="links" href="{{route('home')}}"><h1 class="logo">Tiger<h2 class="logo" style="color: #B55038;">2022</h2></h1></a></div></div>
                     <div class="header3">
                         <ul>
                             <div id="bar" class="containerse">
@@ -43,7 +43,7 @@ all-tiger
                             </div>
                             <li><a class="links" href="{{route('home')}}">Главная</a></li>
                             <li><a class="links" href="{{route('page2')}}">О тиграх</a></li>
-                            <li><a class="links" href="#photo">Фотогалерея</a></li>
+                            <li><a class="links" href="{{route('all')}}">Фотогалерея</a></li>
                             <li><a class="links" href="#contacts">Контакты</a></li>
                         </ul>
                     </div>
@@ -51,15 +51,14 @@ all-tiger
             </div>
         </div>
     </header>
-    <section class="section-alltigers">
+    <section class="section01">
         <div class="container">
             <div id="glavnaya" class="tiger">
                 <div class="contents"  style="justify-content: flex-end;">
-                    <h1 class="glavnaya" style="margin-bottom: 200px;margin-right: 130px; justify-content: flex-end">Виды тигров</h1>
+                    <h1 class="glavnaya">Виды тигров</h1>
                 </div>
             </div>
-        </div>
-    </section>
+        </div></section>
     <section class="section">
         <div class="container">
             <div class="contents" >
@@ -68,7 +67,7 @@ all-tiger
                         @foreach($data as $row)
                             <div style="margin-top: -230px;margin-left: 125px">
                                 <a style="cursor: default" href="#">
-                                    <div style="margin-bottom: 330px">
+                                    <div style="margin-bottom: 220px">
                                         <img style="width: 440px;height: 250px;object-fit: contain;" src="{{asset('storage/' . $row -> image)}}">
                                         <div>
                                             <h2 class="viditigrov">{{ $row -> name }}</h2>
@@ -82,7 +81,7 @@ all-tiger
             </div>
         </div>
     </section>
-    <footer id="contacts" style="margin-top: 200px">
+    <footer id="contacts">
         <div class="container" style="max-width: 1200px; margin: 0px 70px">
             <div class="futer">
                 <div><div class="logotip1"><div style="display: flex;cursor: pointer"><a style="color: transparent;display: flex;" class="links" href="#"><h1 class="logo1">Tiger<h2 class="logo1" style="color: #B55038;">2022</h2></h1></a></div></div></div>
@@ -99,6 +98,7 @@ all-tiger
                             <div class="box">
                                 <div class="iconf">
                                     <img  src="../../images/facebook.svg" style="width: 50px; height: 40px" >
+
                                 </div>
                             </div>
                         </a>

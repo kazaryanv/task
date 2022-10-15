@@ -14,6 +14,7 @@
                     <button class="btn btn-primary">
                         <a style="color:white; text-decoration: none" href="{{ route('edit-title', $title->id) }}">Edit</a>
                     </button>
+
                 </div>
             </div>
         </div>
