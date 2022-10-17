@@ -25,6 +25,7 @@ require ("auth.php");
 Route::get('/history',[StoryController::class,'index'])->name('page2');
 Route::get('/' , [StoryController::class,'home_view'])->name('home');
 Route::get('/all_Tigers',[StoryController::class,'all_Tiger'])->name('all');
+Route::get('one_post/{id}',[StoryController::class, 'show'])->name('one_post');
 
 
 

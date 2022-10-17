@@ -1,22 +1,20 @@
 @extends('layouts.default')
-@section('link')
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-@endsection
 @section('title')
-all-tiger
+manramasnutyunner
 @endsection
 @section('content')
     <header>
-        <div class="container1" style="margin: 0px 70px; max-width: 1200px">
+        <div class="container">
             <div class="header">
                 <div class="header2">
-                    <div class="logotip"><div style="cursor: pointer"><a style="color: transparent;display: flex;" class="links" href="{{route('home')}}"><h1 class="logo">Tiger<h2 class="logo" style="color: #B55038;">2022</h2></h1></a></div></div>
+                    <div class="logotip"><div style="display: flex;cursor: pointer"><a style="color: transparent;display: flex;" class="links" href="#"><h1 class="logo">Tiger<h2 class="logo" style="color: #B55038;">2022</h2></h1></a></div></div>
                     <div class="header3">
                         <ul>
                             <div id="bar" class="containerse">
                                 <h1 class="maniue">
                                     <a href="#menu">|||</a>
                                 </h1>
+
                                 <div class="popover" id="menu">
                                     <a href="#" class="close1"></a>
                                     <div class = 'content'>
@@ -51,38 +49,23 @@ all-tiger
             </div>
         </div>
     </header>
-    <section class="section01">
+    <section class="section1">
         <div class="container">
             <div id="glavnaya" class="tiger">
-                <div class="contents"  style="justify-content: flex-end;">
-                    <h1 class="glavnaya">Виды тигров</h1>
-                </div>
-            </div>
-        </div></section>
-    <section class="section">
-        <div class="container">
-            <div class="contents" >
-                <div style="width: 100%;display: flex;flex-wrap: wrap;align-items: center;justify-content: center;">
-                    @if(isset($data))
-                        @foreach($data as $row)
-                            <div style="margin-top: -230px;margin-left: 125px">
-                                <a style="cursor: default" href="#">
-                                    <div style="margin-bottom: 220px">
-                                        <img style="width: 440px;height: 250px;object-fit: contain;" src="{{asset('storage/' . $row -> image)}}">
-                                        <div>
-                                            <h2 class="viditigrov">{{ $row -> name }}</h2>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        @endforeach
-                    @endif
+                <div class="container" style="margin: unset">
+                    <div class="row">
+                        <div class="col-4" style="width:100%;height:500px;display: flex;flex-direction: column;align-items: center;justify-content: space-evenly;">
+                            <img style="width: 440px;height: 250px;object-fit: contain;" src="{{asset('storage/' . $image -> image)}}">
+                            <h1>{{$image->name}}</h1>
+                            <p style="border: 5px solid white">{{$image->content}}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <footer id="contacts">
-        <div class="container" style="max-width: 1200px; margin: 0px 70px">
+    <footer id="contacts" style="margin-top: unset">
+        <div class="container">
             <div class="futer">
                 <div><div class="logotip1"><div style="display: flex;cursor: pointer"><a style="color: transparent;display: flex;" class="links" href="#"><h1 class="logo1">Tiger<h2 class="logo1" style="color: #B55038;">2022</h2></h1></a></div></div></div>
                 <div>
