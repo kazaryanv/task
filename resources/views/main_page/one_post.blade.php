@@ -49,15 +49,20 @@ manramasnutyunner
             </div>
         </div>
     </header>
-    <section class="section1">
+    <section class="section1" style="display: block">
+        <div>
+            <button style="background: bottom;border: unset;margin-left: 20px;">
+                <a href="{{route('all')}}" style="color:white;font-size: 30px">⮌</a>
+            </button>
+        </div>
         <div class="container">
             <div id="glavnaya" class="tiger">
                 <div class="container" style="margin: unset">
                     <div class="row">
                         <div class="col-4" style="width:100%;height:500px;display: flex;flex-direction: column;align-items: center;justify-content: space-evenly;">
                             <img style="width: 440px;height: 250px;object-fit: contain;" src="{{asset('storage/' . $image -> image)}}">
-                            <h1>{{$image->name}}</h1>
-                            <p style="border: 5px solid white">{{$image->content}}</p>
+                            <h1 style="color: white;font-size: 30px">{{$image->name}}</h1>
+                            <p style="color: white;font-size: 20px">{{$image->content}}</p>
                         </div>
                     </div>
                 </div>
